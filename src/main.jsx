@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css'
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
+import { NavBar } from './components/Navbar'
+
+import "./index.css"
+import FooterComp from './components/FooterComp'
 
 const options = {
   // you can also just use 'bottom center'
@@ -17,7 +20,9 @@ const options = {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AlertProvider template={AlertTemplate} {...options}>
+      <NavBar />
       <App />
+      <FooterComp />
     </AlertProvider>
   </React.StrictMode>,
 )
